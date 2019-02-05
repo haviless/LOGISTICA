@@ -1,0 +1,2641 @@
+object FOrdenPago: TFOrdenPago
+  Left = 389
+  Top = 124
+  Width = 738
+  Height = 469
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  Caption = 'Documentos por Orden de Compra'
+  Color = 14869218
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  KeyPreview = True
+  OldCreateOrder = False
+  Position = poScreenCenter
+  Visible = True
+  OnClose = FormClose
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lblNro: TLabel
+    Left = 13
+    Top = 9
+    Width = 67
+    Height = 15
+    Caption = 'N'#186' O.Compra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblProv: TLabel
+    Left = 166
+    Top = 9
+    Width = 52
+    Height = 15
+    Caption = 'Proveedor'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblTMon: TLabel
+    Left = 12
+    Top = 56
+    Width = 40
+    Height = 15
+    Caption = 'Moneda'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblConCom: TLabel
+    Left = 426
+    Top = 9
+    Width = 105
+    Height = 15
+    Caption = 'Condici'#243'n Comercial'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object lblFEmi: TLabel
+    Left = 634
+    Top = 9
+    Width = 73
+    Height = 15
+    Caption = 'Fecha Emisi'#243'n'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 164
+    Top = 56
+    Width = 51
+    Height = 15
+    Caption = 'Total O/C'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 263
+    Top = 56
+    Width = 95
+    Height = 15
+    Caption = 'Total Solic.O.Pago'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label14: TLabel
+    Left = 501
+    Top = 56
+    Width = 103
+    Height = 15
+    Caption = 'Estado Solic.O.Pago'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label18: TLabel
+    Left = 377
+    Top = 56
+    Width = 50
+    Height = 15
+    Caption = 'Pendiente'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object Label20: TLabel
+    Left = 5
+    Top = 121
+    Width = 319
+    Height = 16
+    Caption = 'Relaci'#243'n de Documentos Ingresados en la Orden de Compra'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsBold, fsUnderline]
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 108
+    Top = 9
+    Width = 43
+    Height = 15
+    Caption = 'Auxiliar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clNavy
+    Font.Height = -11
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    ParentFont = False
+  end
+  object bbtnRecalSaldOPago: TBitBtn
+    Left = 256
+    Top = 400
+    Width = 209
+    Height = 25
+    Caption = 'Recalcula Saldos Solic.O.Pago'
+    TabOrder = 20
+    OnClick = bbtnRecalSaldOPagoClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00555550FF0559
+      1950555FF75F7557F7F757000FF055591903557775F75557F77570FFFF055559
+      1933575FF57F5557F7FF0F00FF05555919337F775F7F5557F7F700550F055559
+      193577557F7F55F7577F07550F0555999995755575755F7FFF7F5570F0755011
+      11155557F755F777777555000755033305555577755F75F77F55555555503335
+      0555555FF5F75F757F5555005503335505555577FF75F7557F55505050333555
+      05555757F75F75557F5505000333555505557F777FF755557F55000000355557
+      07557777777F55557F5555000005555707555577777FF5557F55553000075557
+      0755557F7777FFF5755555335000005555555577577777555555}
+    NumGlyphs = 2
+  end
+  object dbgDetalleOrdPago: TwwDBGrid
+    Left = 4
+    Top = 144
+    Width = 667
+    Height = 249
+    TabStop = False
+    DisableThemesInTitle = False
+    MemoAttributes = [mSizeable, mWordWrap, mGridShow]
+    IniAttributes.Delimiter = ';;'
+    TitleColor = 7566265
+    FixedCols = 0
+    ShowHorzScrollBar = True
+    Ctl3D = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    KeyOptions = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap]
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 13
+    TitleAlignment = taCenter
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clNavy
+    TitleFont.Height = -11
+    TitleFont.Name = 'Comic Sans MS'
+    TitleFont.Style = []
+    TitleLines = 2
+    TitleButtons = False
+    UseTFields = False
+    OnDblClick = dbgDetalleOrdPagoDblClick
+    object btnAdiccionaOrdenPago: TwwIButton
+      Left = 0
+      Top = 0
+      Width = 25
+      Height = 29
+      AllowAllUp = True
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        33333333FF33333333FF333993333333300033377F3333333777333993333333
+        300033F77FFF3333377739999993333333333777777F3333333F399999933333
+        33003777777333333377333993333333330033377F3333333377333993333333
+        3333333773333333333F333333333333330033333333F33333773333333C3333
+        330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+        993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+        333333333337733333FF3333333C333330003333333733333777333333333333
+        3000333333333333377733333333333333333333333333333333}
+      NumGlyphs = 2
+      OnClick = btnAdiccionaOrdenPagoClick
+    end
+  end
+  object dblcdProv: TwwDBLookupComboDlg
+    Left = 152
+    Top = 25
+    Width = 69
+    Height = 21
+    CharCase = ecUpperCase
+    GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+    GridColor = clWhite
+    GridTitleAlignment = taCenter
+    Caption = 'Proveedores'
+    MaxWidth = 0
+    MaxHeight = 209
+    Selected.Strings = (
+      'PROV'#9'9'#9'C'#243'digo'#9'F'
+      'PROVRUC'#9'12'#9'N'#186' RUC'#9'F'
+      'PROVDES'#9'30'#9'Raz'#243'n Social'#9'F'
+      'PROVNOMCOM'#9'30'#9'Nombre Comercial'#9'F')
+    TabOrder = 2
+    AutoDropDown = False
+    ShowButton = True
+    AllowClearKey = True
+    ShowMatchText = True
+    OnExit = dblcdProvExit
+  end
+  object dblcdProv_des: TwwDBEdit
+    Left = 220
+    Top = 25
+    Width = 204
+    Height = 21
+    CharCase = ecUpperCase
+    Color = 14869218
+    DataField = 'PROVDES'
+    Enabled = False
+    MaxLength = 8
+    TabOrder = 3
+    UnboundDataType = wwDefault
+    WantReturns = False
+    WordWrap = False
+  end
+  object dblcTMoneda: TwwDBLookupCombo
+    Left = 12
+    Top = 71
+    Width = 45
+    Height = 21
+    DropDownAlignment = taLeftJustify
+    Selected.Strings = (
+      'TMONID'#9'3'#9'ID'#9'F'
+      'TMONDES'#9'30'#9'Moneda'#9'F'
+      'TMONABR'#9'8'#9'Abreviatura'#9'F')
+    Options = [loColLines, loRowLines, loTitles]
+    Enabled = False
+    MaxLength = 1
+    TabOrder = 7
+    AutoDropDown = False
+    ShowButton = True
+    SearchDelay = 2
+    PreciseEditRegion = False
+    AllowClearKey = True
+    ShowMatchText = True
+    OnExit = dblcTMonedaExit
+  end
+  object dblcTMoneda_des: TEdit
+    Left = 59
+    Top = 71
+    Width = 96
+    Height = 21
+    Color = 14869218
+    Enabled = False
+    TabOrder = 8
+  end
+  object dblcFPago: TwwDBLookupCombo
+    Left = 427
+    Top = 25
+    Width = 43
+    Height = 21
+    DropDownAlignment = taLeftJustify
+    Selected.Strings = (
+      'CCOMERID'#9'2'#9'ID'#9'F'
+      'CCOMERDES'#9'30'#9'Condicion Comercial'#9'F')
+    Options = [loColLines, loTitles]
+    DropDownCount = 15
+    Enabled = False
+    TabOrder = 4
+    AutoDropDown = False
+    ShowButton = True
+    SearchDelay = 2
+    PreciseEditRegion = False
+    AllowClearKey = True
+    ShowMatchText = True
+    OnExit = dblcFPagoExit
+  end
+  object dbdtpFEmi: TwwDBDateTimePicker
+    Left = 633
+    Top = 25
+    Width = 82
+    Height = 21
+    CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+    CalendarAttributes.Font.Color = clWindowText
+    CalendarAttributes.Font.Height = -11
+    CalendarAttributes.Font.Name = 'MS Sans Serif'
+    CalendarAttributes.Font.Style = []
+    Epoch = 1950
+    Enabled = False
+    ShowButton = True
+    TabOrder = 6
+    DisplayFormat = 'dd/mm/yyyy'
+  end
+  object dblcdOrdenCompra: TwwDBLookupComboDlg
+    Left = 7
+    Top = 25
+    Width = 98
+    Height = 21
+    CharCase = ecUpperCase
+    GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+    GridColor = clWhite
+    GridTitleAlignment = taCenter
+    Caption = 'Ordenes de Compra'
+    MaxWidth = 0
+    MaxHeight = 209
+    Selected.Strings = (
+      'PROV'#9'9'#9'C'#243'digo'#9'F'
+      'PROVRUC'#9'12'#9'N'#186' RUC'#9'F'
+      'PROVDES'#9'30'#9'Raz'#243'n Social'#9'F'
+      'PROVNOMCOM'#9'30'#9'Nombre Comercial'#9'F')
+    TabOrder = 0
+    AutoDropDown = False
+    ShowButton = True
+    AllowClearKey = True
+    ShowMatchText = True
+    OnExit = dblcdOrdenCompraExit
+  end
+  object dblcFPago_des: TEdit
+    Left = 470
+    Top = 25
+    Width = 161
+    Height = 21
+    Color = 14869218
+    Enabled = False
+    TabOrder = 5
+  end
+  object dbeTotalOC: TwwDBEdit
+    Left = 164
+    Top = 72
+    Width = 95
+    Height = 21
+    CharCase = ecUpperCase
+    Color = 14869218
+    Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 9
+    UnboundDataType = wwDefault
+    WantReturns = False
+    WordWrap = False
+  end
+  object dbeTotalOrdPago: TwwDBEdit
+    Left = 263
+    Top = 72
+    Width = 110
+    Height = 21
+    CharCase = ecUpperCase
+    Color = 14869218
+    Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 10
+    UnboundDataType = wwDefault
+    WantReturns = False
+    WordWrap = False
+  end
+  object dbeEstadoOrdPago: TwwDBEdit
+    Left = 501
+    Top = 72
+    Width = 167
+    Height = 21
+    CharCase = ecUpperCase
+    Color = 14869218
+    Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 12
+    UnboundDataType = wwDefault
+    WantReturns = False
+    WordWrap = False
+  end
+  object Z2bbtnImprime: TBitBtn
+    Left = 93
+    Top = 399
+    Width = 32
+    Height = 31
+    Hint = 'Imprime Listado de Ordenes de Pago'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 17
+    OnClick = Z2bbtnImprimeClick
+    Glyph.Data = {
+      BE080000424DBE0800000000000036000000280000001B0000001A0000000100
+      18000000000088080000CE0E0000D80E00000000000000000000C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+      0000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C080
+      8080000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000000000000000000000808080C0C0
+      C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C000000080808080800080808080
+      8000808080808000808080808000808080808000808080808000808080808000
+      808080808000808080808080808000000000C0C0C0C0C0C0C0C0C0000000C0C0
+      C0C0C0C000000000000000000000000000000000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000C0C0C0C0C0C0000000C0C0C0C0C0C00000008080008080
+      0080800080800080800080800080800080800080800080800080800080800080
+      8000808000808000808000808000808000808000808000808000000000C0C0C0
+      C0C0C0000000C0C0C0C0C0C00000008080008080000000000000008080000000
+      0000000080800000000000000080800080800080800080800000000000000000
+      0000000000000000000000808000000000C0C0C0C0C0C0000000C0C0C0C0C0C0
+      0000008080008080000000000000008080000000000000008080000000000000
+      0080800080800080800080800000000000000000000000000000000000000080
+      8000000000C0C0C0C0C0C0000000C0C0C0C0C0C0000000808000808000808000
+      8080008080008080008080008080008080008080008080008080008080008080
+      00808000808000808000808000808000808000808000000000C0C0C0C0C0C000
+      0000C0C0C0C0C0C0000000808000808000808000808000808000808000808000
+      8080008080008080008080008080008080008080008080008080008080008080
+      00808000808000808000000000C0C0C0C0C0C0000000C0C0C0C0C0C0000000C0
+      C0C0C0C0C0FFFFFFFFFFFFC0C0C0FFFFFFC0C0C0FFFFFFC0C0C0FFFFFFFFFFFF
+      C0C0C0FFFFFFC0C0C0FFFFFFC0C0C0FFFFFFFFFFFFC0C0C0FFFFFFC0C0C00000
+      00C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C000000000000000000000000000
+      0000000000000000000000000000000000000000000000000000000000000000
+      000000000000000000000000000000000000C0C0C0C0C0C0C0C0C0000000C0C0
+      C0C0C0C0C0C0C0C0C0C0000000808000808000000000FFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000808000808000
+      000000C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C00000
+      00000000000000000000FFFFFF00000000000080808080808000000080808000
+      0000808080000000FFFFFF000000000000000000000000C0C0C0C0C0C0C0C0C0
+      C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00
+      0000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF0000000000008080800000
+      00808080000000000000C0C0C0000000FFFFFF000000C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+      0000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFF000000
+      808080000000000000808080000000FFFFFFFFFFFFFFFFFFFFFFFF000000C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+      0000FFFFFF000000000000808080808080000000000000FFFFFF000000000000
+      000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFF000000C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFF000000000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C00000000000
+      00000000000000000000000000000000000000000000000000C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0000000C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0
+      C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C0C000
+      0000}
+  end
+  object dbePendiente: TwwDBEdit
+    Left = 377
+    Top = 72
+    Width = 115
+    Height = 21
+    CharCase = ecUpperCase
+    Color = 14869218
+    Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 11
+    UnboundDataType = wwDefault
+    WantReturns = False
+    WordWrap = False
+  end
+  object Z2bbtn_Pagos: TBitBtn
+    Left = 55
+    Top = 399
+    Width = 26
+    Height = 30
+    Hint = 'Mostrar Pagos'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 16
+    OnClick = Z2bbtn_PagosClick
+    Glyph.Data = {
+      F6060000424DF606000000000000360000002800000017000000180000000100
+      180000000000C006000000000000000000000000000000000000FFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF00
+      0000FFFFFFFFFFFFFEFFFEFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFCFBFBFCFCFCFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFF000000FFFDFDFBFDFCFEFFFFFFFFFFD9DAD9AFAFAF5A56565E
+      5A5E605D615C5D615C5B62685A63675A61615C5F696D6E8E92918A918ED5DCD8
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FDFEFDFFFFFFE7E2E38B83843736
+      364343466B7F7F4A787614555001504A01524E044F4D014F4C00544E0A4B4427
+      35343F4746858685D9D9D9FFFFFFFFFFFFFFFFFFFFFFFF000000FEFFFFFAFAF9
+      5B54563D3B3D89878B8DA9AB55A4A016867E108C840F8F870D8B84118983118F
+      8A048A821B827D4276782956563A4648838B8DFFFFFFFFFFFFFFFFFFFFFFFF00
+      0000FFFFFF93979654535588929589B5B6388F8C06837B01867E1275730E4345
+      0A2F310F32361A575B107F7E177F80538E944A939411504D2F393DFFFFFFFFFF
+      FFFFFFFFFFFFFF000000DEDDDD5B6060929093B5C2C72A8C88007A7400837D09
+      717015484D1540451420241B272D2C42490755560084813084887BB1B51D8B84
+      234345FFFFFFFFFFFFFFFFFFFFFFFF000000D1CECF3F3B3CA0A3A686A6A90E79
+      7603817E0285830562621174750A68661A3C39244647355F6203424100888228
+      8F8D80BCBE148078234241FFFFFFFFFFFFFFFFFFFFFFFF000000CFCDCD464545
+      93ABAC41908D00797407807F017F7D0A8483155C5E0C2C2D0F1D1A101D1C1840
+      400E7976017F7A39A4A04298951D4D49ACB1B0FFFFFFFFFFFFFFFFFFFFFFFF00
+      0000EEEEEE6A6F6D647A7A74A8AB19817F057C7A0084800E7572123C3C1D716B
+      213D382946453664660D60600485811185800C5C59616667FFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFF000000FFFFFFADB1AF50565AB1CFD665B6B90D80800D7E7D23
+      7B79134C48083C3511201B162222204A4C1376760183810773713E595BE3E0E1
+      FCFFFEFFFFFFFFFFFFFFFFFFFFFFFF000000FBFFFDFFFFFFB1AFB2374D513673
+      752588873785863D858629807C1B525016383B153D410E7978168C8C21868706
+      494AA19FA3FFFFFFF8FEFCFFFFFFFFFFFFFFFFFFFFFFFF000000FEFEFCFFFEFD
+      FFFFFFB4B2B2555F602145442C69693980801B494619656518888E0A85890081
+      811160601E484B768081FEFFFFFEFEFEFBFFFCFFFFFFFFFFFFFFFFFFFFFFFF00
+      0000FFFEFDFEFDFCFAFFFFFFFFFFFDFDFCBFBCBD555F61205A583275732A5454
+      0C605D0B89831D7A76195752244B48D7D4D5FFFFFFFAFDFCFAFEFBFFFFFFFFFF
+      FFFFFFFFFFFFFF000000FDFFFEFCFDFDFCFDFDFCFCFDFFFFFFFFFFFFFFFFFF7E
+      83852D474735646031554F0A1E1C0C1918091716C2C6C6FFFFFFFFFCFEFEFCFC
+      F8FCFBFFFFFFFFFFFFFFFFFFFFFFFF000000FFFDFEFEFCFDFAFCFCFEFDFDFEFD
+      FDFAFEFEFFFFFFFFFFFFDDDCDC323A372D3A38161C1A192523161F1DD4D6D6FF
+      FFFFFDFDFEFFFBFDF9FCFCFFFFFFFFFFFFFFFFFFFFFFFF000000FFFEFFFEFCFD
+      FCFEFFFBFEFEFDFFFEFFFEFDFFFEFEFCFFFFFFFFFFD4D4D418272A1D3F3F3D83
+      7E307A7437615C9BA9A9FAFFFFFFFFFFFDFCFDFFFFFFFFFFFFFFFFFFFFFFFF00
+      0000FCFFFFFDFFFFFFFEFFFFFFFFFCFFFFFCFDFBF9FEFBF6FEFDFFFFFFC0C3C3
+      164A4F164A4F1B6768138A860B78711A4846808A8BF3F2F2FEFDFEFFFFFFFFFF
+      FFFFFFFFFFFFFF000000F8FFFFF6FFFFFEFFFFFFFDFFFFFDFFFCFEFCF6FFFCF8
+      FFFDFFFFFF465655016B6D066266108082147A79194E4D1C3838575B5DEBE7E9
+      FFFDFEFFFFFFFFFFFFFFFFFFFFFFFF000000F9FFFFF9FFFFFFFFFFFFFEFFFFFE
+      FFFDFEFEFEFEFEFEFDFDFFFFFF7985830C5B59148E8B177E7A254B4D46484E5B
+      565BF1EDEFFFFFFFFFFDFEFFFFFFFFFFFFFFFFFFFFFFFF000000FEFEFFFEFEFF
+      FCFFFFF8FFFFFAFFFFFFFEFEFFFCFEFFFBFDFFFEFEDEE2E22243400E423F0013
+      1132393B666668F0EEEFFFFFFFF5FDFCF8FEFCFFFFFFFFFFFFFFFFFFFFFFFF00
+      0000FFFEFFFFFEFFFCFFFFF9FFFFFBFFFFFFFEFEFFFEFEFFFEFFFFFEFEFFFFFF
+      BCC4C2858181848080BEBFC0FEFEFEFFFFFFFBFFFEF8FFFEFBFFFEFFFFFFFFFF
+      FFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000}
+    Margin = 0
+  end
+  object btnImprimeOrdenPago: TBitBtn
+    Left = 143
+    Top = 399
+    Width = 32
+    Height = 31
+    Hint = 'Imprime Formato de Orden de Pago'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 18
+    Visible = False
+    OnClick = btnImprimeOrdenPagoClick
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      0400000000000001000000000000000000001000000010000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00300000000000
+      0003377777777777777308888888888888807F33333333333337088888888888
+      88807FFFFFFFFFFFFFF7000000000000000077777777777777770F8F8F8F8F8F
+      8F807F333333333333F708F8F8F8F8F8F9F07F333333333337370F8F8F8F8F8F
+      8F807FFFFFFFFFFFFFF7000000000000000077777777777777773330FFFFFFFF
+      03333337F3FFFF3F7F333330F0000F0F03333337F77773737F333330FFFFFFFF
+      03333337F3FF3FFF7F333330F00F000003333337F773777773333330FFFF0FF0
+      33333337F3F37F3733333330F08F0F0333333337F7337F7333333330FFFF0033
+      33333337FFFF7733333333300000033333333337777773333333}
+    NumGlyphs = 2
+  end
+  object Z2bbtnCierraOP: TBitBtn
+    Left = 600
+    Top = 395
+    Width = 33
+    Height = 30
+    Hint = 'Cerrar Orden Compra'
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 19
+    OnClick = Z2bbtnCierraOPClick
+    Glyph.Data = {
+      5E040000424D5E04000000000000360000002800000012000000130000000100
+      1800000000002804000000000000000000000000000000000000FFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFF0000FFFFFFF0FBFFC4E6F64A98C32A87BE3A89C24286B553
+      90B05992AB5C95B45588A8668EAB7194A8779DA17E9D9AD5DFDFFDFFFFFFFFFF
+      0000FFFFFFF1FDFF799EB464B8E840A5E34DA6E369B9F07CC4EC83C7EA89CEF5
+      9EDCFFAEE2FFA3D2EEBFEDF8C7ECF08B999FF7FAFFFFFFFF0000FFFFFFECFBFF
+      6B94B55DB9F4289CE336A3ED40A5EA56B5ED5DB7ED67C1FA68BFF87FCBFF91D5
+      FF9CDCF5C8F9FF859BADF3FAFFFFFFFF0000FFFFFFE7F7FF7DA7CA4EAEEA1992
+      DC2AA1F02C9EEB46AFF250B7F653BAFF5DC0FF67C0FD7ACBFE86D1F1B0E9FF83
+      9BB3EDF7FFFFFFFF0000FFFFFFEDFBFF789FBF61BEF5239CE1229AE631A6F13E
+      A9ED47AFF246ACF451B6FB60BFFE62B8EC7DCCEDB8F2FF778FA7F1F9FFFFFFFF
+      0000FFFFFFF1FCFF7498B07CD1FF40AEEA42B0F24BB3F858B9F963C0FF64BFFF
+      60BAFB68BFF86CBCEB77C0DCC0F8FF7D95A7F1FBFFFFFFFF0000FFFFFFF4FFFF
+      87A7B498DDFE66BEEC71C7FB68BAF179C2F484C9FB86C9FF90D4FF86C8F891D1
+      F49FDAEED0FEFF8298A3F3FEFFFFFFFF0000FFFFFFF2FBFE8AA3ADBBF1FF95D7
+      FA96D7FE9EDAFFA2D6FEA7D8FFA6D8FFA5D5FFB1DEFFB4E0FDB8E3F2D9FDFF88
+      9BA2F1FDFFFFFFFF0000FFFFFFF4FFFF82949FC5EAFFBAE6FFB9E0FFC4EAFFC9
+      EBFFC8EAFFCAECFFCBEAFFD0EAFFC9E1F9D9F2FFCCE2ED8B9DA4F1FFFFFFFFFF
+      0000FFFFFFF6FCFFF3FDFF98ACBE97AEC4A4B9CF859AAF9DB3C59EB7C79AB0C2
+      A2B5CA939EB4A1ABBD8A95A3A9B3BDF3FEFFF4FDFFFFFFFF0000FFFFFFFBFAFF
+      FBFBFFF7FAFFC3C8D7C1C7D4CDD6E0F1FEFFEAFDFFEFFFFFEDF7FFB9BBC6D1CF
+      DB94939DFBFAFFFBFDFFFAFDFFFFFFFF0000FFFFFFFFFBFFFEF6FFFFF9FFD3CF
+      D5D2D1D5D2D4D5F7FFFEF4FFFDF3FEFCFAFFFFC3BFC4D2CBD0A199A0FFFCFFFF
+      FCFFFCFAFFFFFFFF0000FFFFFFFFFDFFFFFDFFFFFDFFC0B8B8FEF9F694948EFD
+      FFFBF8FFF8FDFFFBFEFFFB9C9995F2EAEA9C9495FFFEFFFFFEFFFFFEFFFFFFFF
+      0000FFFFFFFFFDFFFCF7F8FFFFFCCAC4BFFDFBF3D2D3CA95958FD5D5CFD4D4CE
+      9C9994E2DFDBC6C3BFD7D3D2FFFFFEFEFCFBFFFEFDFFFFFF0000FFFFFFFAFEFF
+      FAFFFFFDFFFCFEFFFAADB4ADF1F7F2F8F9F7D0CECED5D0D1F8F6F6D5D7D7ADB2
+      B1FAFFFFFAFFFFF6FFFCF8FFFEFFFFFF0000FFFFFFF3FEFFF6FFFFFAFFFEF6FE
+      F7FAFFFCD5DCD9CBCBCBD8D5D7D3CCCFB5B2B4D5D9DAF6FFFFF1FBFBEDFAF8F4
+      FFFFF3FFFDFFFFFF0000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+      0000}
+    Margin = 5
+  end
+  object dblcTipoAuxiliar: TwwDBLookupCombo
+    Left = 108
+    Top = 25
+    Width = 41
+    Height = 21
+    DropDownAlignment = taLeftJustify
+    Options = [loColLines, loRowLines, loTitles]
+    Enabled = False
+    TabOrder = 1
+    AutoDropDown = True
+    ShowButton = True
+    PreciseEditRegion = False
+    AllowClearKey = False
+  end
+  object pnlOrdenPago: TPanel
+    Left = 168
+    Top = 96
+    Width = 401
+    Height = 313
+    Color = 14869218
+    TabOrder = 14
+    object Label21: TLabel
+      Left = 5
+      Top = 16
+      Width = 66
+      Height = 15
+      Caption = 'Solic.O.Pago'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label22: TLabel
+      Left = 306
+      Top = 16
+      Width = 85
+      Height = 15
+      Caption = 'Total Sol.O.Pago'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label23: TLabel
+      Left = 86
+      Top = 16
+      Width = 30
+      Height = 15
+      Caption = 'Fecha'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label25: TLabel
+      Left = 30
+      Top = 279
+      Width = 46
+      Height = 16
+      Caption = 'Estado:'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label15: TLabel
+      Left = 184
+      Top = 16
+      Width = 34
+      Height = 15
+      Caption = 'Estado'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label16: TLabel
+      Left = 5
+      Top = 57
+      Width = 112
+      Height = 16
+      Caption = 'Saldo Actual de O/C'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object dbgDocumentos: TwwDBGrid
+      Left = 5
+      Top = 103
+      Width = 389
+      Height = 154
+      TabStop = False
+      DisableThemesInTitle = False
+      MemoAttributes = [mSizeable, mWordWrap, mGridShow]
+      IniAttributes.Delimiter = ';;'
+      TitleColor = 7566265
+      FixedCols = 0
+      ShowHorzScrollBar = True
+      Ctl3D = True
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      KeyOptions = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap]
+      ParentCtl3D = False
+      ParentFont = False
+      TabOrder = 10
+      TitleAlignment = taCenter
+      TitleFont.Charset = ANSI_CHARSET
+      TitleFont.Color = clNavy
+      TitleFont.Height = -11
+      TitleFont.Name = 'Comic Sans MS'
+      TitleFont.Style = []
+      TitleLines = 2
+      TitleButtons = False
+      UseTFields = False
+      OnDblClick = dbgDocumentosDblClick
+      OnKeyDown = dbgDocumentosKeyDown
+      object btnAdiccionaDocumentoPago: TwwIButton
+        Left = 0
+        Top = 0
+        Width = 25
+        Height = 29
+        AllowAllUp = True
+        Glyph.Data = {
+          76010000424D7601000000000000760000002800000020000000100000000100
+          04000000000000010000130B0000130B00001000000000000000000000000000
+          800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+          FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+          33333333FF33333333FF333993333333300033377F3333333777333993333333
+          300033F77FFF3333377739999993333333333777777F3333333F399999933333
+          33003777777333333377333993333333330033377F3333333377333993333333
+          3333333773333333333F333333333333330033333333F33333773333333C3333
+          330033333337FF3333773333333CC333333333FFFFF77FFF3FF33CCCCCCCCCC3
+          993337777777777F77F33CCCCCCCCCC3993337777777777377333333333CC333
+          333333333337733333FF3333333C333330003333333733333777333333333333
+          3000333333333333377733333333333333333333333333333333}
+        NumGlyphs = 2
+        OnClick = btnAdiccionaDocumentoPagoClick
+      end
+    end
+    object stxTitulo2: TStaticText
+      Left = 1
+      Top = 1
+      Width = 399
+      Height = 17
+      Align = alTop
+      Alignment = taCenter
+      BorderStyle = sbsSunken
+      Caption = 'Solicitud de Orden de Pago'
+      Color = clHighlight
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlightText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      ShowAccelChar = False
+      TabOrder = 0
+    end
+    object edtOrdenPago: TwwDBEdit
+      Left = 5
+      Top = 32
+      Width = 76
+      Height = 21
+      CharCase = ecUpperCase
+      Color = 14869218
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 1
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object edtTotalOrdenPago: TwwDBEdit
+      Left = 304
+      Top = 32
+      Width = 90
+      Height = 21
+      CharCase = ecUpperCase
+      Color = 14869218
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object dtpFecha: TwwDBDateTimePicker
+      Left = 84
+      Top = 32
+      Width = 89
+      Height = 21
+      CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+      CalendarAttributes.Font.Color = clWindowText
+      CalendarAttributes.Font.Height = -11
+      CalendarAttributes.Font.Name = 'MS Sans Serif'
+      CalendarAttributes.Font.Style = []
+      Color = 14869218
+      Epoch = 1950
+      Enabled = False
+      ShowButton = True
+      TabOrder = 3
+      OnExit = dbdtpEmisionExit
+    end
+    object btnAnulaOrdenPago: TBitBtn
+      Left = 215
+      Top = 274
+      Width = 32
+      Height = 31
+      Hint = 'Anula Orden de Pago'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 4
+      OnClick = btnAnulaOrdenPagoClick
+      Glyph.Data = {
+        96010000424D9601000000000000760000002800000015000000180000000100
+        0400000000002001000000000000000000001000000010000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00888888888888
+        8888888880009988888888888888888990009990000000000000009990008999
+        FFFFFFFFFFFFF999800088999FFFFFFFFFFF99988000880999FFFFFFFFF99908
+        8000880F999FFFFFFF999F088000880FF999FFFFF999FF088000880FFF999FFF
+        999FFF088000880FFFF999F999FFFF088000880FFFFF99999FFFFF088000880F
+        FFFFF999FFFFFF088000880FFFFF99999FFFFF088000880FFFF999F999FFFF08
+        8000880FFF999FFF999FFF088000880FF999FFFFF999FF088000880F999FFFFF
+        FF999F088000880999FFFFFFFFF99908800088999FFFFFFFFFFF999880008999
+        FFFFFFFFFFFFF9998000999FFFFFFFFFFFFFFF99900099000000000000000009
+        9000888888888888888888888000888888888888888888888000}
+    end
+    object edtEstadoOrdenPago: TwwDBEdit
+      Left = 80
+      Top = 275
+      Width = 126
+      Height = 27
+      TabStop = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clBlue
+      Font.Height = -16
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      ParentColor = True
+      ParentFont = False
+      ReadOnly = True
+      TabOrder = 5
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object btnAceptaOrdenPago: TBitBtn
+      Left = 313
+      Top = 274
+      Width = 32
+      Height = 31
+      Hint = 'Aceptar Orden de Pago'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+      TabStop = False
+      OnClick = btnAceptaOrdenPagoClick
+      Glyph.Data = {
+        F2010000424DF201000000000000760000002800000024000000130000000100
+        0400000000007C01000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333334433333
+        3333333333388F3333333333000033334224333333333333338338F333333333
+        0000333422224333333333333833338F33333333000033422222243333333333
+        83333338F3333333000034222A22224333333338F33F33338F33333300003222
+        A2A2224333333338F383F3338F33333300003A2A222A222433333338F8333F33
+        38F33333000034A22222A22243333338833333F3338F333300004222A2222A22
+        2433338F338F333F3338F3330000222A3A2224A22243338F3838F338F3338F33
+        0000A2A333A2224A2224338F83338F338F3338F300003A33333A2224A2224338
+        333338F338F3338F000033333333A2224A2243333333338F338F338F00003333
+        33333A2224A2233333333338F338F83300003333333333A2224A333333333333
+        8F338F33000033333333333A222433333333333338F338F30000333333333333
+        A224333333333333338F38F300003333333333333A223333333333333338F8F3
+        000033333333333333A3333333333333333383330000}
+      NumGlyphs = 2
+    end
+    object btnCerrarOrdenPago: TBitBtn
+      Left = 355
+      Top = 270
+      Width = 33
+      Height = 34
+      Hint = 'Salir de Orden de Pago'
+      TabOrder = 7
+      OnClick = btnCerrarOrdenPagoClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333333333000033338833333333333333333F333333333333
+        0000333911833333983333333388F333333F3333000033391118333911833333
+        38F38F333F88F33300003339111183911118333338F338F3F8338F3300003333
+        911118111118333338F3338F833338F3000033333911111111833333338F3338
+        3333F8330000333333911111183333333338F333333F83330000333333311111
+        8333333333338F3333383333000033333339111183333333333338F333833333
+        00003333339111118333333333333833338F3333000033333911181118333333
+        33338333338F333300003333911183911183333333383338F338F33300003333
+        9118333911183333338F33838F338F33000033333913333391113333338FF833
+        38F338F300003333333333333919333333388333338FFF830000333333333333
+        3333333333333333333888330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object edtEstado: TwwDBEdit
+      Left = 184
+      Top = 32
+      Width = 114
+      Height = 21
+      CharCase = ecUpperCase
+      Color = 14869218
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 8
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object edtSaldoOC: TwwDBEdit
+      Left = 5
+      Top = 72
+      Width = 105
+      Height = 21
+      CharCase = ecUpperCase
+      Color = clWhite
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 9
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+  end
+  object pnlDocumento: TPanel
+    Left = 254
+    Top = 47
+    Width = 363
+    Height = 322
+    Color = 14869218
+    TabOrder = 15
+    object Label5: TLabel
+      Left = 11
+      Top = 19
+      Width = 56
+      Height = 15
+      Caption = 'Documento'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label8: TLabel
+      Left = 11
+      Top = 58
+      Width = 29
+      Height = 15
+      Caption = 'Serie'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label9: TLabel
+      Left = 83
+      Top = 58
+      Width = 40
+      Height = 15
+      Caption = 'N'#250'mero'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label10: TLabel
+      Left = 171
+      Top = 58
+      Width = 73
+      Height = 15
+      Caption = 'Fecha Emisi'#243'n'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 267
+      Top = 60
+      Width = 26
+      Height = 15
+      Caption = 'Total'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label68: TLabel
+      Left = 10
+      Top = 199
+      Width = 31
+      Height = 15
+      Caption = 'Banco'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label66: TLabel
+      Left = 194
+      Top = 196
+      Width = 50
+      Height = 15
+      Caption = 'T.Moneda'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+      Transparent = True
+    end
+    object Label69: TLabel
+      Left = 11
+      Top = 239
+      Width = 87
+      Height = 15
+      Caption = 'Cuenta Corriente'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 194
+      Top = 238
+      Width = 20
+      Height = 15
+      Caption = 'CCI'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblCCosto: TLabel
+      Left = 11
+      Top = 134
+      Width = 80
+      Height = 15
+      Caption = 'Centro de Costo'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object lblCia: TLabel
+      Left = 12
+      Top = 94
+      Width = 49
+      Height = 15
+      Caption = 'Compa'#241#237'a'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+    end
+    object StaticText1: TStaticText
+      Left = 1
+      Top = 1
+      Width = 361
+      Height = 17
+      Align = alTop
+      Alignment = taCenter
+      BorderStyle = sbsSunken
+      Caption = 'Detalle de Solicitud de Orden de Pago'
+      Color = clHighlight
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clHighlightText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentColor = False
+      ParentFont = False
+      ShowAccelChar = False
+      TabOrder = 0
+    end
+    object dblcDocumento: TwwDBLookupCombo
+      Left = 11
+      Top = 35
+      Width = 43
+      Height = 21
+      DropDownAlignment = taLeftJustify
+      TabOrder = 1
+      AutoDropDown = False
+      ShowButton = True
+      PreciseEditRegion = False
+      AllowClearKey = False
+      OnExit = dblcDocumentoExit
+    end
+    object dblcDocumento_des: TwwDBEdit
+      Left = 53
+      Top = 35
+      Width = 205
+      Height = 21
+      CharCase = ecUpperCase
+      Color = 14869218
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 2
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object dbeSerie: TwwDBEdit
+      Left = 11
+      Top = 74
+      Width = 65
+      Height = 21
+      CharCase = ecUpperCase
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      MaxLength = 5
+      ParentFont = False
+      TabOrder = 3
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+      OnExit = dbeSerieExit
+    end
+    object dbeNumero: TwwDBEdit
+      Left = 83
+      Top = 74
+      Width = 71
+      Height = 21
+      CharCase = ecUpperCase
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      MaxLength = 20
+      ParentFont = False
+      TabOrder = 4
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+      OnExit = dbeNumeroExit
+    end
+    object dbdtpEmision: TwwDBDateTimePicker
+      Left = 170
+      Top = 74
+      Width = 89
+      Height = 21
+      CalendarAttributes.Font.Charset = DEFAULT_CHARSET
+      CalendarAttributes.Font.Color = clWindowText
+      CalendarAttributes.Font.Height = -11
+      CalendarAttributes.Font.Name = 'MS Sans Serif'
+      CalendarAttributes.Font.Style = []
+      Epoch = 1950
+      ShowButton = True
+      TabOrder = 5
+      OnExit = dbdtpEmisionExit
+    end
+    object dbeTotal: TwwDBEdit
+      Left = 267
+      Top = 74
+      Width = 86
+      Height = 21
+      CharCase = ecUpperCase
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 6
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+      OnExit = dbeTotalExit
+    end
+    object bbtnAdicionaDocumento: TBitBtn
+      Left = 274
+      Top = 280
+      Width = 32
+      Height = 34
+      Hint = 'Registrar Documento'
+      TabOrder = 16
+      OnClick = bbtnAdicionaDocumentoClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333333333333333330000333333333333333333333333F33333333333
+        00003333344333333333333333388F3333333333000033334224333333333333
+        338338F3333333330000333422224333333333333833338F3333333300003342
+        222224333333333383333338F3333333000034222A22224333333338F338F333
+        8F33333300003222A3A2224333333338F3838F338F33333300003A2A333A2224
+        33333338F83338F338F33333000033A33333A222433333338333338F338F3333
+        0000333333333A222433333333333338F338F33300003333333333A222433333
+        333333338F338F33000033333333333A222433333333333338F338F300003333
+        33333333A222433333333333338F338F00003333333333333A22433333333333
+        3338F38F000033333333333333A223333333333333338F830000333333333333
+        333A333333333333333338330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object btnCerrarDocumento: TBitBtn
+      Left = 309
+      Top = 280
+      Width = 33
+      Height = 34
+      Hint = 'Salir del Regisro de Documentos'
+      TabOrder = 17
+      OnClick = btnCerrarDocumentoClick
+      Glyph.Data = {
+        DE010000424DDE01000000000000760000002800000024000000120000000100
+        0400000000006801000000000000000000001000000000000000000000000000
+        80000080000000808000800000008000800080800000C0C0C000808080000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333333333333000033338833333333333333333F333333333333
+        0000333911833333983333333388F333333F3333000033391118333911833333
+        38F38F333F88F33300003339111183911118333338F338F3F8338F3300003333
+        911118111118333338F3338F833338F3000033333911111111833333338F3338
+        3333F8330000333333911111183333333338F333333F83330000333333311111
+        8333333333338F3333383333000033333339111183333333333338F333833333
+        00003333339111118333333333333833338F3333000033333911181118333333
+        33338333338F333300003333911183911183333333383338F338F33300003333
+        9118333911183333338F33838F338F33000033333913333391113333338FF833
+        38F338F300003333333333333919333333388333338FFF830000333333333333
+        3333333333333333333888330000333333333333333333333333333333333333
+        0000}
+      NumGlyphs = 2
+    end
+    object dblcBanco: TwwDBLookupCombo
+      Left = 11
+      Top = 216
+      Width = 45
+      Height = 21
+      CharCase = ecUpperCase
+      DropDownAlignment = taLeftJustify
+      Selected.Strings = (
+        'BANCOID'#9'3'#9'Id'#9'T'
+        'BANCONOM'#9'40'#9'Banco'#9'T')
+      DataField = 'BANCOID'
+      Options = [loColLines, loRowLines, loTitles]
+      DropDownCount = 15
+      Enabled = False
+      MaxLength = 2
+      TabOrder = 10
+      AutoDropDown = False
+      ShowButton = True
+      SearchDelay = 2
+      PreciseEditRegion = False
+      AllowClearKey = False
+      OnExit = dblcBancoExit
+    end
+    object dbeBanco: TEdit
+      Left = 54
+      Top = 216
+      Width = 128
+      Height = 21
+      Enabled = False
+      TabOrder = 11
+    end
+    object dblcTMon: TwwDBLookupCombo
+      Left = 194
+      Top = 216
+      Width = 43
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      CharCase = ecUpperCase
+      DropDownAlignment = taLeftJustify
+      Selected.Strings = (
+        'TMONID'#9'3'#9'Moneda'#9'F'
+        'TMONDES'#9'30'#9'Descripci'#243'n'#9'F')
+      DataField = 'TMONID'
+      Options = [loColLines, loRowLines]
+      Enabled = False
+      MaxLength = 2
+      ParentFont = False
+      TabOrder = 12
+      AutoDropDown = True
+      ShowButton = True
+      SearchDelay = 2
+      PreciseEditRegion = False
+      AllowClearKey = False
+      OnExit = dblcTMonExit
+    end
+    object edtTMon: TEdit
+      Left = 238
+      Top = 216
+      Width = 113
+      Height = 23
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 13
+    end
+    object dbeCtaCte: TwwDBEdit
+      Left = 11
+      Top = 256
+      Width = 172
+      Height = 21
+      CharCase = ecUpperCase
+      Enabled = False
+      TabOrder = 14
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object dbeCodCtaInt: TwwDBEdit
+      Left = 194
+      Top = 256
+      Width = 157
+      Height = 21
+      CharCase = ecUpperCase
+      Enabled = False
+      TabOrder = 15
+      UnboundDataType = wwDefault
+      WantReturns = False
+      WordWrap = False
+    end
+    object btnBuscarCta: TBitBtn
+      Left = 11
+      Top = 172
+      Width = 99
+      Height = 26
+      Hint = 'Pasa a Registrar Detalle'
+      Caption = 'Cta bancarias'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 9
+      OnClick = btnBuscarCtaClick
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000130B0000130B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        333333333333333FF3FF3333333333CC30003333333333773777333333333C33
+        3000333FF33337F33777339933333C3333333377F33337F3333F339933333C33
+        33003377333337F33377333333333C333300333F333337F33377339333333C33
+        3333337FF3333733333F33993333C33333003377FF33733333773339933C3333
+        330033377FF73F33337733339933C33333333FF377F373F3333F993399333C33
+        330077F377F337F33377993399333C33330077FF773337F33377399993333C33
+        33333777733337F333FF333333333C33300033333333373FF7773333333333CC
+        3000333333333377377733333333333333333333333333333333}
+      NumGlyphs = 2
+    end
+    object dblcdCCosto: TwwDBLookupComboDlg
+      Left = 11
+      Top = 147
+      Width = 95
+      Height = 23
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      GridOptions = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgPerfectRowFit]
+      GridColor = clWhite
+      GridTitleAlignment = taLeftJustify
+      Caption = 'Centro de Costo'
+      MaxWidth = 0
+      MaxHeight = 209
+      SearchDelay = 2
+      Selected.Strings = (
+        'CCOSID'#9'15'#9'Id'#9'F'
+        'CCOSDES'#9'30'#9'Centro de Costo'#9'F')
+      DataField = 'CCOSID'
+      LookupField = 'CCOSID'
+      SeqSearchOptions = [ssoEnabled, ssoCaseSensitive]
+      MaxLength = 12
+      ParentFont = False
+      TabOrder = 8
+      AutoDropDown = True
+      ShowButton = True
+      AllowClearKey = True
+      UseTFields = False
+      ShowMatchText = True
+      OnExit = dblcdCCostoExit
+    end
+    object edtCCosto: TEdit
+      Left = 105
+      Top = 147
+      Width = 248
+      Height = 23
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlack
+      Font.Height = -11
+      Font.Name = 'Comic Sans MS'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 18
+    end
+    object dblcCIA: TwwDBLookupCombo
+      Left = 11
+      Top = 110
+      Width = 45
+      Height = 21
+      DropDownAlignment = taLeftJustify
+      Selected.Strings = (
+        'CIAID'#9'2'#9'ID'#9'F'
+        'CIADES'#9'40'#9'Descripci'#243'n'#9'F'
+        'CIAABR'#9'15'#9'Abreviatura'#9'F')
+      DataField = 'CIAID'
+      LookupField = 'CIAID'
+      Options = [loColLines, loTitles]
+      DropDownCount = 15
+      TabOrder = 7
+      AutoDropDown = False
+      ShowButton = True
+      SearchDelay = 2
+      PreciseEditRegion = False
+      AllowClearKey = True
+      ShowMatchText = True
+      OnExit = dblcCIAExit
+    end
+    object edtCIA: TEdit
+      Left = 57
+      Top = 110
+      Width = 296
+      Height = 21
+      Enabled = False
+      TabOrder = 19
+    end
+  end
+  object ppDBPipeline_OrdenPago: TppDBPipeline
+    UserName = 'DBPipeline_OrdenPago'
+    Left = 88
+    Top = 432
+  end
+  object ppReport_OrdenPago: TppReport
+    AutoStop = False
+    DataPipeline = ppDBPipeline_OrdenPago
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.PaperName = 'Carta'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 279401
+    PrinterSetup.mmPaperWidth = 215900
+    PrinterSetup.PaperSize = 1
+    Template.FileName = 'C:\DemaExes\RTMS\LOG\Dema\OrdenPago.rtm'
+    DeviceType = 'Screen'
+    OutlineSettings.CreateNode = True
+    OutlineSettings.CreatePageNodes = True
+    OutlineSettings.Enabled = True
+    OutlineSettings.Visible = True
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = True
+    Left = 98
+    Top = 432
+    Version = '7.02'
+    mmColumnWidth = 0
+    DataPipelineName = 'ppDBPipeline_OrdenPago'
+    object ppHeaderBand1: TppHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppDetailBand1: TppDetailBand
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+    object ppFooterBand1: TppFooterBand
+      mmBottomOffset = 0
+      mmHeight = 13229
+      mmPrintPosition = 0
+    end
+  end
+  object ppDesigner_OrdenPago: TppDesigner
+    Caption = 'ReportBuilder'
+    DataSettings.SessionType = 'BDESession'
+    DataSettings.AllowEditSQL = False
+    DataSettings.CollationType = ctASCII
+    DataSettings.DatabaseType = dtParadox
+    DataSettings.IsCaseSensitive = True
+    DataSettings.SQLType = sqBDELocal
+    Position = poScreenCenter
+    IniStorageType = 'IniFile'
+    IniStorageName = '($WINSYS)\RBuilder.ini'
+    WindowHeight = 400
+    WindowLeft = 100
+    WindowTop = 50
+    WindowWidth = 600
+    Left = 107
+    Top = 432
+  end
+  object pprFormatoOrdenPago: TppReport
+    PrinterSetup.BinName = 'Default'
+    PrinterSetup.DocumentName = 'Report'
+    PrinterSetup.PaperName = 'Carta'
+    PrinterSetup.PrinterName = 'Default'
+    PrinterSetup.mmMarginBottom = 6350
+    PrinterSetup.mmMarginLeft = 6350
+    PrinterSetup.mmMarginRight = 6350
+    PrinterSetup.mmMarginTop = 6350
+    PrinterSetup.mmPaperHeight = 279401
+    PrinterSetup.mmPaperWidth = 215900
+    PrinterSetup.PaperSize = 1
+    Template.FileName = 'C:\DemaExes\RTMS\LOG\Dema\OrdenPagoFormato.rtm'
+    DeviceType = 'Screen'
+    OutlineSettings.CreateNode = True
+    OutlineSettings.CreatePageNodes = True
+    OutlineSettings.Enabled = True
+    OutlineSettings.Visible = True
+    TextSearchSettings.DefaultString = '<FindText>'
+    TextSearchSettings.Enabled = True
+    Left = 520
+    Top = 432
+    Version = '7.02'
+    mmColumnWidth = 0
+    object ppHeaderBand2: TppHeaderBand
+      mmBottomOffset = 0
+      mmHeight = 134673
+      mmPrintPosition = 0
+      object ppSystemVariable1: TppSystemVariable
+        UserName = 'SystemVariable1'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 176477
+        mmTop = 16404
+        mmWidth = 16933
+        BandType = 0
+      end
+      object ppLabel57: TppLabel
+        UserName = 'Label16'
+        Caption = 'Fecha :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 161925
+        mmTop = 16404
+        mmWidth = 12700
+        BandType = 0
+      end
+      object ppSystemVariable2: TppSystemVariable
+        UserName = 'SystemVariable2'
+        VarType = vtTime
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 176477
+        mmTop = 20638
+        mmWidth = 16669
+        BandType = 0
+      end
+      object ppLabel58: TppLabel
+        UserName = 'Label17'
+        Caption = 'Hora :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 161925
+        mmTop = 20638
+        mmWidth = 12700
+        BandType = 0
+      end
+      object ppSystemVariable3: TppSystemVariable
+        UserName = 'SystemVariable3'
+        VarType = vtPageNo
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 176477
+        mmTop = 24606
+        mmWidth = 3440
+        BandType = 0
+      end
+      object ppLabel60: TppLabel
+        UserName = 'Label18'
+        Caption = 'P'#225'gina :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 161925
+        mmTop = 24606
+        mmWidth = 12700
+        BandType = 0
+      end
+      object ppLabel62: TppLabel
+        UserName = 'Label19'
+        Caption = 'de'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 179917
+        mmTop = 24606
+        mmWidth = 2910
+        BandType = 0
+      end
+      object ppLabel63: TppLabel
+        UserName = 'Label20'
+        Caption = 'Usuario :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 161925
+        mmTop = 28310
+        mmWidth = 12700
+        BandType = 0
+      end
+      object ppSystemVariable10: TppSystemVariable
+        UserName = 'SystemVariable4'
+        VarType = vtPageCount
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3175
+        mmLeft = 183357
+        mmTop = 24606
+        mmWidth = 12965
+        BandType = 0
+      end
+      object ppDBText13: TppDBText
+        UserName = 'DBText13'
+        DataField = 'USUARIO_IMPRIME'
+        DataPipeline = ppDBPipeline_OrdenPago
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = []
+        ParentDataPipeline = False
+        Transparent = True
+        DataPipelineName = 'ppDBPipeline_OrdenPago'
+        mmHeight = 3175
+        mmLeft = 176742
+        mmTop = 28310
+        mmWidth = 17198
+        BandType = 0
+      end
+      object ppLabel18: TppLabel
+        UserName = 'Label26'
+        Caption = 'Observaci'#243'n :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 119327
+        mmWidth = 19315
+        BandType = 0
+      end
+      object ppLabel17: TppLabel
+        UserName = 'Label25'
+        Caption = 'Tipo de Compra: '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 128059
+        mmTop = 103188
+        mmWidth = 24045
+        BandType = 0
+      end
+      object ppLabel16: TppLabel
+        UserName = 'Label24'
+        Caption = 'Fecha Emisi'#243'n :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 128059
+        mmTop = 99219
+        mmWidth = 22352
+        BandType = 0
+      end
+      object ppLabel4: TppLabel
+        UserName = 'Label4'
+        Caption = 'RUC :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 107156
+        mmWidth = 8202
+        BandType = 0
+      end
+      object ppLabel3: TppLabel
+        UserName = 'Label3'
+        Caption = 'Proveedor :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 103188
+        mmWidth = 16140
+        BandType = 0
+      end
+      object ppLabel2: TppLabel
+        UserName = 'Label2'
+        Caption = 'N'#250'mero :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 99219
+        mmWidth = 12700
+        BandType = 0
+      end
+      object ppLabel1: TppLabel
+        UserName = 'Label1'
+        Caption = 'Compa'#241#237'a :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 95250
+        mmWidth = 15875
+        BandType = 0
+      end
+      object ppLabel19: TppLabel
+        UserName = 'Label27'
+        Caption = 'ORDEN DE PAGO N'#186'  '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = [fsBold, fsUnderline]
+        Transparent = True
+        mmHeight = 5292
+        mmLeft = 68263
+        mmTop = 25929
+        mmWidth = 43921
+        BandType = 0
+      end
+      object ppDBText1: TppDBText
+        UserName = 'DBText1'
+        DataField = 'ORDENPAGO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 12
+        Font.Style = [fsBold, fsUnderline]
+        Transparent = True
+        mmHeight = 5292
+        mmLeft = 111125
+        mmTop = 25929
+        mmWidth = 21431
+        BandType = 0
+      end
+      object ppDBText2: TppDBText
+        UserName = 'DBText2'
+        DataField = 'COMPANIA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 53975
+        mmTop = 95515
+        mmWidth = 4498
+        BandType = 0
+      end
+      object ppDBText3: TppDBText
+        UserName = 'DBText3'
+        DataField = 'COMPANIA_DES'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 58738
+        mmTop = 95515
+        mmWidth = 87048
+        BandType = 0
+      end
+      object ppDBText4: TppDBText
+        UserName = 'DBText4'
+        AutoSize = True
+        DataField = 'OC_NUMERO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 53975
+        mmTop = 99484
+        mmWidth = 15579
+        BandType = 0
+      end
+      object ppDBText5: TppDBText
+        UserName = 'DBText5'
+        AutoSize = True
+        DataField = 'PROVEEDOR'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 53975
+        mmTop = 103452
+        mmWidth = 10160
+        BandType = 0
+      end
+      object ppDBText6: TppDBText
+        UserName = 'DBText6'
+        DataField = 'PROVEEDOR_DES'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 65881
+        mmTop = 103452
+        mmWidth = 57679
+        BandType = 0
+      end
+      object ppDBText7: TppDBText
+        UserName = 'DBText7'
+        AutoSize = True
+        DataField = 'PROVEEDOR_RUC'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 53975
+        mmTop = 107421
+        mmWidth = 21421
+        BandType = 0
+      end
+      object ppDBText8: TppDBText
+        UserName = 'DBText8'
+        DataField = 'OC_FECHAEMI'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 154517
+        mmTop = 99484
+        mmWidth = 17198
+        BandType = 0
+      end
+      object ppDBText9: TppDBText
+        UserName = 'DBText9'
+        DataField = 'OC_OBSERVACION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        WordWrap = True
+        mmHeight = 8202
+        mmLeft = 53975
+        mmTop = 119592
+        mmWidth = 121444
+        BandType = 0
+      end
+      object ppDBText11: TppDBText
+        UserName = 'DBText11'
+        DataField = 'OC_TIPOADQUISICION_DES'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 154517
+        mmTop = 103452
+        mmWidth = 36248
+        BandType = 0
+      end
+      object ppDBText12: TppDBText
+        UserName = 'DBText12'
+        AutoSize = True
+        DataField = 'OC_TOTAL'
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 53975
+        mmTop = 113506
+        mmWidth = 13716
+        BandType = 0
+      end
+      object ppLabel20: TppLabel
+        UserName = 'Label28'
+        Caption = 'Total O/Compra:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 113506
+        mmWidth = 22754
+        BandType = 0
+      end
+      object ppDBText27: TppDBText
+        UserName = 'DBText27'
+        DataField = 'OC_TOTALORDENPAGO'
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 108479
+        mmTop = 113506
+        mmWidth = 17198
+        BandType = 0
+      end
+      object ppLabel21: TppLabel
+        UserName = 'Label22'
+        Caption = 'Total Ordenes de Pago:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 75142
+        mmTop = 113506
+        mmWidth = 32681
+        BandType = 0
+      end
+      object ppLabel23: TppLabel
+        UserName = 'Label30'
+        Caption = 'Moneda : '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 128059
+        mmTop = 107156
+        mmWidth = 13716
+        BandType = 0
+      end
+      object ppDBText29: TppDBText
+        UserName = 'DBText29'
+        DataField = 'MONEDA_DES'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 154517
+        mmTop = 107156
+        mmWidth = 32015
+        BandType = 0
+      end
+      object ppLabel24: TppLabel
+        UserName = 'Label31'
+        Caption = 'Datos de Orden de Compra'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold, fsUnderline]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 21167
+        mmTop = 89429
+        mmWidth = 52917
+        BandType = 0
+      end
+      object ppLabel26: TppLabel
+        UserName = 'Label33'
+        Caption = 'Datos de Orden de Pago'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold, fsUnderline]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 21960
+        mmTop = 48419
+        mmWidth = 33867
+        BandType = 0
+      end
+      object ppLabel5: TppLabel
+        UserName = 'Label5'
+        Caption = 'N'#186' Orden Pago :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 25135
+        mmTop = 55033
+        mmWidth = 22352
+        BandType = 0
+      end
+      object ppDBText14: TppDBText
+        UserName = 'DBText14'
+        AutoSize = True
+        DataField = 'ORDENPAGO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 54769
+        mmTop = 55298
+        mmWidth = 15579
+        BandType = 0
+      end
+      object ppLabel6: TppLabel
+        UserName = 'Label6'
+        Caption = 'Tipo de Documento :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 59267
+        mmWidth = 29104
+        BandType = 0
+      end
+      object ppDBText16: TppDBText
+        UserName = 'DBText16'
+        DataField = 'CXP_DOCUMENTO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 3969
+        mmLeft = 54769
+        mmTop = 59531
+        mmWidth = 3704
+        BandType = 0
+      end
+      object ppDBText17: TppDBText
+        UserName = 'DBText17'
+        AutoSize = True
+        DataField = 'CXP_DOCUMENTO_DES'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 59002
+        mmTop = 59531
+        mmWidth = 28533
+        BandType = 0
+      end
+      object ppLabel7: TppLabel
+        UserName = 'Label7'
+        Caption = 'N'#186' de Documento :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 128059
+        mmTop = 59267
+        mmWidth = 26077
+        BandType = 0
+      end
+      object ppDBText18: TppDBText
+        UserName = 'DBText18'
+        AutoSize = True
+        DataField = 'CXP_SERIE'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 154517
+        mmTop = 59531
+        mmWidth = 7789
+        BandType = 0
+      end
+      object ppDBText19: TppDBText
+        UserName = 'DBText19'
+        DataField = 'CXP_NUMERO'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 163513
+        mmTop = 59531
+        mmWidth = 12700
+        BandType = 0
+      end
+      object ppDBText23: TppDBText
+        UserName = 'DBText23'
+        AutoSize = True
+        DataField = 'CXP_EMISION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 54769
+        mmTop = 64029
+        mmWidth = 17611
+        BandType = 0
+      end
+      object ppDBText24: TppDBText
+        UserName = 'DBText24'
+        AutoSize = True
+        DataField = 'CXP_RECEPCION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 154517
+        mmTop = 64029
+        mmWidth = 17611
+        BandType = 0
+      end
+      object ppDBText22: TppDBText
+        UserName = 'DBText22'
+        AutoSize = True
+        DataField = 'CXP_TOTAL'
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 54769
+        mmTop = 68263
+        mmWidth = 10753
+        BandType = 0
+      end
+      object ppDBText26: TppDBText
+        UserName = 'DBText26'
+        DataField = 'OBSERVACION'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        WordWrap = True
+        mmHeight = 11113
+        mmLeft = 54769
+        mmTop = 72231
+        mmWidth = 121709
+        BandType = 0
+      end
+      object ppLabel8: TppLabel
+        UserName = 'Label8'
+        Caption = 'Fecha Documento :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 63765
+        mmWidth = 26988
+        BandType = 0
+      end
+      object ppLabel9: TppLabel
+        UserName = 'Label9'
+        Caption = 'Fecha Recepci'#243'n :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 128059
+        mmTop = 63765
+        mmWidth = 25654
+        BandType = 0
+      end
+      object ppLabel10: TppLabel
+        UserName = 'Label10'
+        Caption = 'Total :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 67998
+        mmWidth = 8731
+        BandType = 0
+      end
+      object ppLabel11: TppLabel
+        UserName = 'Label301'
+        Caption = 'Moneda : '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 128059
+        mmTop = 55033
+        mmWidth = 13716
+        BandType = 0
+      end
+      object ppDBText32: TppDBText
+        UserName = 'DBText32'
+        AutoSize = True
+        DataField = 'MONEDA_DES'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4064
+        mmLeft = 154517
+        mmTop = 55298
+        mmWidth = 21844
+        BandType = 0
+      end
+      object ppLabel12: TppLabel
+        UserName = 'Label101'
+        Caption = 'Observaci'#243'n :'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 25135
+        mmTop = 72231
+        mmWidth = 19315
+        BandType = 0
+      end
+      object ppLabel14: TppLabel
+        UserName = 'Label14'
+        Caption = 'Pendiente Ordenes de Pago:'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial Narrow'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4149
+        mmLeft = 128059
+        mmTop = 113506
+        mmWidth = 39624
+        BandType = 0
+      end
+      object ppDBText10: TppDBText
+        UserName = 'DBText10'
+        DataField = 'OC_PENDIENTEORDENPAGO'
+        DisplayFormat = '#,0.00;-#,0.00'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 10
+        Font.Style = [fsBold]
+        Transparent = True
+        mmHeight = 4233
+        mmLeft = 170392
+        mmTop = 113506
+        mmWidth = 17198
+        BandType = 0
+      end
+    end
+    object ppDetailBand2: TppDetailBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppFooterBand2: TppFooterBand
+      mmBottomOffset = 0
+      mmHeight = 60590
+      mmPrintPosition = 0
+      object ppDBText15: TppDBText
+        UserName = 'DBText15'
+        AutoSize = True
+        DataField = 'USUARIO_REGISTRA'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 11
+        Font.Style = []
+        TextAlignment = taCentered
+        Transparent = True
+        mmHeight = 4572
+        mmLeft = 50271
+        mmTop = 8731
+        mmWidth = 24215
+        BandType = 8
+      end
+      object ppLine1: TppLine
+        UserName = 'Line1'
+        Weight = 0.750000000000000000
+        mmHeight = 3969
+        mmLeft = 33338
+        mmTop = 5556
+        mmWidth = 56621
+        BandType = 8
+      end
+      object ppLine2: TppLine
+        UserName = 'Line2'
+        Weight = 0.750000000000000000
+        mmHeight = 3969
+        mmLeft = 114300
+        mmTop = 5556
+        mmWidth = 56621
+        BandType = 8
+      end
+      object ppLabel13: TppLabel
+        UserName = 'Label11'
+        Caption = 'V'#186'B'#186
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 11
+        Font.Style = []
+        Transparent = True
+        mmHeight = 4498
+        mmLeft = 139965
+        mmTop = 8731
+        mmWidth = 8202
+        BandType = 8
+      end
+    end
+    object ppSummaryBand1: TppSummaryBand
+      mmBottomOffset = 0
+      mmHeight = 0
+      mmPrintPosition = 0
+    end
+    object ppParameterList1: TppParameterList
+    end
+  end
+  object ppdFormatoOrdenPago: TppDesigner
+    Caption = 'ReportBuilder'
+    DataSettings.SessionType = 'BDESession'
+    DataSettings.AllowEditSQL = False
+    DataSettings.CollationType = ctASCII
+    DataSettings.DatabaseType = dtParadox
+    DataSettings.IsCaseSensitive = True
+    DataSettings.SQLType = sqBDELocal
+    Position = poScreenCenter
+    Report = pprFormatoOrdenPago
+    IniStorageType = 'IniFile'
+    IniStorageName = '($WINSYS)\RBuilder.ini'
+    WindowHeight = 400
+    WindowLeft = 100
+    WindowTop = 50
+    WindowWidth = 600
+    Left = 504
+    Top = 432
+  end
+  object ppdbFormatoOrdenPago: TppDBPipeline
+    UserName = 'dbFormatoOrdenPago'
+    Left = 544
+    Top = 432
+  end
+end

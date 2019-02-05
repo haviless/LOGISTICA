@@ -1,0 +1,51 @@
+object fLstCtaBancaria: TfLstCtaBancaria
+  Left = 489
+  Top = 292
+  Width = 433
+  Height = 221
+  Caption = 'Cuentas Bancarias del Proveedor'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgCtaBancaria: TwwDBGrid
+    Left = 4
+    Top = 24
+    Width = 409
+    Height = 153
+    TabStop = False
+    DisableThemesInTitle = False
+    MemoAttributes = [mSizeable, mWordWrap, mGridShow]
+    IniAttributes.Delimiter = ';;'
+    TitleColor = 7566265
+    FixedCols = 0
+    ShowHorzScrollBar = True
+    Ctl3D = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -9
+    Font.Name = 'Comic Sans MS'
+    Font.Style = []
+    KeyOptions = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgWordWrap]
+    ParentCtl3D = False
+    ParentFont = False
+    TabOrder = 0
+    TitleAlignment = taCenter
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clNavy
+    TitleFont.Height = -11
+    TitleFont.Name = 'Comic Sans MS'
+    TitleFont.Style = []
+    TitleLines = 2
+    TitleButtons = False
+    UseTFields = False
+    OnDblClick = dbgCtaBancariaDblClick
+  end
+end
